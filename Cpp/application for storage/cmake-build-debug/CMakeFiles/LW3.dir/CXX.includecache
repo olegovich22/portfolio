@@ -1,0 +1,68 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+D:/GitHub/portfolio/Cpp/application for storage/Goods.cpp
+Goods.h
+D:/GitHub/portfolio/Cpp/application for storage/Goods.h
+iostream
+-
+string.h
+-
+
+D:/GitHub/portfolio/Cpp/application for storage/Goods.h
+iostream
+-
+
+D:/GitHub/portfolio/Cpp/application for storage/clases.cpp
+clases.h
+D:/GitHub/portfolio/Cpp/application for storage/clases.h
+helpFunctions.h
+D:/GitHub/portfolio/Cpp/application for storage/helpFunctions.h
+iostream
+-
+
+D:/GitHub/portfolio/Cpp/application for storage/clases.h
+ctime
+-
+Goods.h
+D:/GitHub/portfolio/Cpp/application for storage/Goods.h
+
+D:/GitHub/portfolio/Cpp/application for storage/helpFunctions.cpp
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+iostream
+-
+ctime
+-
+clases.h
+D:/GitHub/portfolio/Cpp/application for storage/clases.h
+
+D:/GitHub/portfolio/Cpp/application for storage/helpFunctions.h
+iostream
+-
+clases.h
+D:/GitHub/portfolio/Cpp/application for storage/clases.h
+Goods.h
+D:/GitHub/portfolio/Cpp/application for storage/Goods.h
+
+D:/GitHub/portfolio/Cpp/application for storage/main.cpp
+iostream
+-
+ctime
+-
+Goods.h
+D:/GitHub/portfolio/Cpp/application for storage/Goods.h
+clases.h
+D:/GitHub/portfolio/Cpp/application for storage/clases.h
+helpFunctions.h
+D:/GitHub/portfolio/Cpp/application for storage/helpFunctions.h
+

@@ -27,7 +27,7 @@ public:
     FastCorrupt(const FastCorrupt &obj);
 
     //operators
-    FastCorrupt* operator = (const FastCorrupt *obj1);
+    FastCorrupt& operator = (const FastCorrupt &obj1);
     bool operator > (const FastCorrupt &obj1);
     bool operator < (const FastCorrupt &obj1);
     friend ostream& operator << (ostream& os, FastCorrupt& data);
@@ -37,7 +37,7 @@ public:
     void setExpiration(int anExpiration);
     void setDateProduction(int aDateProduction);
 
-    virtual void bestBefore(FastCorrupt *obj);
+    virtual void bestBefore();
 
     int getExpiration() const;
     int getDateProduction() const;
@@ -62,7 +62,7 @@ public:
     Drugs(const Drugs &obj);
 
     //operators
-    Drugs* operator = (const Drugs *obj1);
+    Drugs& operator = (const Drugs &obj1);
     bool operator > (const Drugs &obj1);
     bool operator < (const Drugs &obj1);
     friend ostream& operator << (ostream& os, Drugs& data);
@@ -74,7 +74,7 @@ public:
     void setTemp(int aTemp);
     void setHumidity(int aHumidity);
 
-    virtual void bestBefore(Drugs *obj);
+    virtual void bestBefore();
 
     int getTemp() const;
     int getHumidity() const;

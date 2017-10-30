@@ -37,9 +37,14 @@ public:
     int getAmount() const;
     char *getLocation() const;
 
-    ~Goods();
+    virtual void bestBefore() = 0;
+
+    virtual ~Goods();
 
 };
+
+
+//int operator () (int a, int b);
 
 
 #endif //LW3_GOODS_H

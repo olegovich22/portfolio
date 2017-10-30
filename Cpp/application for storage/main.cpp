@@ -9,31 +9,47 @@ using namespace std;
 
 int main() {
 
-    Drugs oleg1;
-    Drugs oleg2;
+    Drugs drug1;
+    Drugs drug2;
 
-    oleg1++;
-    ++oleg2;
+    ++drug1++;
+    ++drug2;
 
-    cout<<oleg1;
+    cout<<drug1;
     cout<<"\n";
-    cout<<oleg2;
+    cout<<drug2;
 
     cout<<"\n";
     cout<<"\n";
+    drug1=drug2;
+
+    cout<<drug1;
+
+    cin>>drug1;
 
 
-    oleg2.setAmount(55);
-    oleg2.setTemp(33);
+    if(drug1>drug2)
+    {
+        cout<<"oleg1>oleg2\n";
+    }
 
-
-    oleg1=oleg2;
-
-    cout<<oleg1;
     cout<<"\n";
-    cout<<oleg2;
+
+    cout<<drug1;
 
 
+
+
+
+//    Goods *base[2];
+//    Drugs child1;
+//    FastCorrupt child2;
+//
+//    base[0]=&child1;
+//    base[1]=&child2;
+//
+//    base[0]->bestBefore();
+//    base[1]->bestBefore();
 
     return 0;
 }

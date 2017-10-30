@@ -10,9 +10,13 @@ using namespace std;
 //constructor and ~constructor
 Goods::Goods()
 {
-    char aName[]="Unknown";
-    char alocation[]="Unknown";
-    setGoodsOption(aName, 0, alocation);
+    name= new char[8];
+    strcpy(name, "Unknown");
+
+    amount=0;
+
+    location= new char[8];
+    strcpy(location, "Unknown");
 }
 
 Goods::Goods(char* aName, int anAmount, char *aLocation)
@@ -22,7 +26,13 @@ Goods::Goods(char* aName, int anAmount, char *aLocation)
 
 Goods::Goods(const Goods &obj)
 {
-    *this=obj;
+    name=new char[strlen(obj.name)];
+    strcpy(name, obj.name);
+
+    amount=obj.amount;
+
+    location=new char[strlen(obj.location)];
+    strcpy(location, obj.location);
 }
 
 Goods::~Goods()
@@ -80,6 +90,10 @@ void Goods::setGoodsOption(char *rName, int rAmount, char *rLocation)
 
 void Goods::setName(char *rName)
 {
+    if(name)
+    {
+        delete [] name;
+    }
     name=new char[strlen(rName)+1];
     strcpy(name, rName);
 }
@@ -91,6 +105,10 @@ void Goods::setAmount(int rAmount)
 
 void Goods::setLocation(char *rLocation)
 {
+    if(location)
+    {
+        delete [] location;
+    }
     location=new char[strlen(rLocation)+1];
     strcpy(location, rLocation);
 }

@@ -30,13 +30,18 @@ FastCorrupt::~FastCorrupt()
 
 
 //operators
-FastCorrupt* FastCorrupt::operator = (const FastCorrupt *obj1)
+FastCorrupt& FastCorrupt::operator = (const FastCorrupt &obj1)
 {
-    expiration=obj1->expiration;
-    dateProduction=obj1->dateProduction;
-    *this=*obj1;
+    if (this == &obj1) {
+        return *this;
+    }
+    setName(obj1.name);
+    amount=obj1.amount;
+    setLocation(obj1.location);
+    expiration=obj1.expiration;
+    dateProduction=obj1.dateProduction;
 
-    return this;
+    return *this;
 }
 
 bool FastCorrupt::operator > (const FastCorrupt &obj1)
@@ -106,10 +111,10 @@ void FastCorrupt::setDateProduction(int aDateProduction)
 }
 
 
-void FastCorrupt::bestBefore(FastCorrupt *obj)
+void FastCorrupt::bestBefore()
 {
-    int expiration=obj->expiration;
-    time_t date=obj->dateProduction*3600;
+    //int expiration=expiration;
+    time_t date=dateProduction*3600;
     time_t expDate=date+expiration*3600;
 
     int uHave=(expDate-time(0))/3600;
@@ -154,15 +159,22 @@ Drugs::Drugs(const Drugs &obj)
 }
 
 
-
 //operators
-Drugs* Drugs::operator = (const Drugs *obj1)
+Drugs& Drugs::operator = (const Drugs &obj1)
 {
-    temp=obj1->temp;
-    humidity=obj1->humidity;
-    *this=*obj1;
+    if (this == &obj1) {
+        return *this;
+    }
+    setName(obj1.name);
+    amount=obj1.amount;
+    setLocation(obj1.location);
+    expiration=obj1.expiration;
+    dateProduction=obj1.dateProduction;
+    temp=obj1.temp;
+    humidity=obj1.humidity;
 
-    return this;
+
+    return *this;
 }
 
 bool Drugs::operator > (const Drugs &obj1)
@@ -238,12 +250,9 @@ void Drugs::setHumidity(int aHumidity)
 }
 
 
-void Drugs::bestBefore(Drugs *obj)
+void Drugs::bestBefore()
 {
-    int temp=obj->temp;
-    int humidity=obj->humidity;
-    time_t expiration=obj->expiration;
-    time_t date=obj->dateProduction*3600;
+    time_t date=dateProduction*3600;
     time_t expDate=date+expiration*3600;
 
     int uHave=(expDate-time(0))/3600;

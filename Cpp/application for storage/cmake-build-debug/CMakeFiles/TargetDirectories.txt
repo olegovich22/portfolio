@@ -1,0 +1,3 @@
+D:/GitHub/portfolio/Cpp/application for storage/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+D:/GitHub/portfolio/Cpp/application for storage/cmake-build-debug/CMakeFiles/LW3.dir
+D:/GitHub/portfolio/Cpp/application for storage/cmake-build-debug/CMakeFiles/edit_cache.dir

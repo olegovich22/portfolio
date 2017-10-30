@@ -209,7 +209,7 @@ void convertHours(int timeInOur)//convert time in our in human read form
 
     if(timeInOur<=0)
     {
-        cout<<"ERROR. Negative time";
+        cout<<"expiration has gone yet";
     }
     if(year>0)
     {
