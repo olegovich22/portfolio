@@ -15,6 +15,5 @@ CMakeFiles/LW3.dir/helpFunctions.cpp.obj: ../helpFunctions.cpp
 
 CMakeFiles/LW3.dir/main.cpp.obj: ../Goods.h
 CMakeFiles/LW3.dir/main.cpp.obj: ../clases.h
-CMakeFiles/LW3.dir/main.cpp.obj: ../helpFunctions.h
 CMakeFiles/LW3.dir/main.cpp.obj: ../main.cpp
 
